@@ -10,6 +10,14 @@ const TodoList = ({ headTitle, todos, onDeleteTodoItem, onToggleTodoItem }) => {
           // TODO: 투두 리스트 렌더링
           // NOTE: map 메서드를 사용하여 `TodoItem` 컴포넌트 렌더링
           // HINT: `TodoItem` 컴포넌트에는 `todo`, `onDeleteTodoItem`, `onToggleTodoItem` props를 전달
+          todos.map((todo) => (
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              onDeleteTodoItem={onDeleteTodoItem}
+              onToggleTodoItem={onToggleTodoItem}
+            ></TodoItem>
+          ))
         }
       </ul>
     </section>
